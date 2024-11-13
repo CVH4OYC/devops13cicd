@@ -1,6 +1,11 @@
 import pytest
+
 from application import TestMe
-def test_server():
-    assert TestMe().take_five() == 5
+
+def test_take_five():
+    server = TestMe()
+    assert server.take_five() == 5
+
 def test_port():
-    assert TestMe().port() == 8000
+    server = TestMe()
+    assert server.port == 8000
